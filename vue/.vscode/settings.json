@@ -1,13 +1,13 @@
 {
-	"editor.tabSize": 2,
-	"editor.insertSpaces": false,
-	"editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": false,
+  "editor.detectIndentation": false,
 
-	"editor.formatOnSave": true,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.codeActionsOnSave": {
-		"source.organizeImports": false,
-		"source.fixAll.eslint": true,
-		"source.fixAll.stylelint": true
-	}
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false,
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  }
 }

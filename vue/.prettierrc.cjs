@@ -10,15 +10,20 @@ module.exports = {
 
   /** @docs https://prettier.io/docs/en/options */
   printWidth: 80,
-  tabWidth: 1,
-  useTabs: true,
   semi: true,
   singleQuote: true,
   trailingComma: 'all',
   htmlWhitespaceSensitivity: 'ignore',
 
   /** @docs https://github.com/NiklasPor/prettier-plugin-organize-attributes#usage */
-  attributeGroups: ['^id$', '^class$', '^name$', '$DEFAULT', '^data-', '^aria-'],
+  attributeGroups: [
+    '^id$',
+    '^class$',
+    '^name$',
+    '$DEFAULT',
+    '^data-',
+    '^aria-',
+  ],
 
   /** @docs https://github.com/hosseinmd/prettier-plugin-jsdoc#options */
   tsdoc: true,
@@ -31,7 +36,5 @@ module.exports = {
   astroAllowShorthand: false,
 
   /** @docs https://prettier.io/docs/en/configuration.html#configuration-overrides */
-  overrides: [
-    { files: ['**/*.svg'], options: { parser: 'html' } },
-  ],
+  overrides: [{ files: ['**/*.svg'], options: { parser: 'html' } }],
 };
