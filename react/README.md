@@ -83,13 +83,14 @@ npm i -D eslint @rushstack/eslint-patch eslint-plugin-import eslint-import-resol
 
 #### Plugins
 
+- [`stylelint-config-html`](https://www.npmjs.com/package/stylelint-config-html)
 - [`stylelint-config-recess-order`](https://www.npmjs.com/package/stylelint-config-recess-order)
 - [`stylelint-declaration-block-no-ignored-properties`](https://www.npmjs.com/package/stylelint-declaration-block-no-ignored-properties)
 
 #### Installation
 
 ```bash
-npm i -D stylelint stylelint-config-recess-order stylelint-declaration-block-no-ignored-properties
+npm i -D stylelint stylelint-config-html stylelint-config-recess-order stylelint-declaration-block-no-ignored-properties
 ```
 
 <br />

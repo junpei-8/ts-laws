@@ -85,6 +85,11 @@ module.exports = {
     {
       files: [`**/*.{jsx,tsx}`],
 
+      settings: {
+        /** @docs https://github.com/jsx-eslint/eslint-plugin-react#configuration-legacy-eslintrc- */
+        react: { version: 'detect' },
+      },
+
       plugins: [
         /**
          * @npm https://www.npmjs.com/package/eslint-plugin-react-refresh

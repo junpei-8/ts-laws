@@ -13,6 +13,12 @@ module.exports = {
      * @config https://github.com/stormwarning/stylelint-config-recess-order/blob/main/index.js
      */
     'stylelint-config-recess-order',
+
+    /**
+     * @npm https://www.npmjs.com/package/stylelint-config-html
+     * @config https://github.com/ota-meshi/stylelint-config-html/blob/main/index.js
+     */
+    'stylelint-config-html',
   ],
 
   rules: {
