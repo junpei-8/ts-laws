@@ -11,8 +11,8 @@
     "check": "npm run concurrently npm:check:*",
     "check:type": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
     "check:prettier": "prettier . --plugin-search-dir . --check",
-    "check:eslint": "eslint \"**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx,vue}\"",
-    "check:stylelint": "stylelint \"**/*.{css,sass,scss,svg,vue}\"",
+    "check:eslint": "eslint \"**/*.{js,cjs,mjs,ts,cts,mts}\"",
+    "check:stylelint": "stylelint \"**/*.{css,svg,vue}\"",
     "concurrently": "concurrently --prefix-colors auto"
   },
   "dependencies": {

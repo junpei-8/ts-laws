@@ -98,7 +98,7 @@ module.exports = {
     },
 
     {
-      files: [`**/*.{${TS_EXTENSIONS},tsx,vue}`],
+      files: [`**/*.{${TS_EXTENSIONS},vue}`],
 
       extends: [
         /**
