@@ -3,6 +3,8 @@
     "Vue.volar",
     "Vue.vscode-typescript-vue-plugin",
     "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint"
-  ]
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint"
+  ],
+  "unwantedRecommendations": []
 }
