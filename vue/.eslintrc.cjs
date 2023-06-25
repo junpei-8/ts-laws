@@ -32,6 +32,12 @@ module.exports = {
     'eslint:recommended',
 
     /**
+     * @npm https://www.npmjs.com/package/eslint-plugin-vuejs-accessibility
+     * @config https://github.com/vue-a11y/eslint-plugin-vuejs-accessibility/blob/main/src/configs/recommended.ts
+     */
+    'plugin:vuejs-accessibility/recommended',
+
+    /**
      * @npm https://www.npmjs.com/package/@vue/eslint-config-prettier
      * @docs https://github.com/vuejs/eslint-config-prettier#use-separate-commands-for-linting-and-formatting
      * @config https://github.com/vuejs/eslint-config-prettier/blob/main/skip-formatting.js
@@ -45,10 +51,10 @@ module.exports = {
     'no-debugger': 'off',
 
     /** @docs https://github.com/import-js/eslint-plugin-import#rules */
-    'import/no-duplicates': ['warn', { considerQueryString: true }],
-    'import/no-unresolved': 'off',
-    'import/namespace': 'off',
     'import/named': 'off',
+    'import/namespace': 'off',
+    'import/no-unresolved': 'off',
+    'import/no-duplicates': ['warn', { considerQueryString: true }],
     'import/order': [
       'warn',
       {
