@@ -139,7 +139,7 @@ npm i -D typescript @types/react @types/react-dom
 
 ### `check`
 
-`vue-tsc`・`prettier`・`eslint`・`prettier` のチェックを並列で実行する。
+`tsc`・`prettier`・`eslint`・`prettier` を用いた静的解析を**並列**で実行する。
 
 ```bash
 npm run check
@@ -147,7 +147,7 @@ npm run check
 
 ### `format`
 
-`vue-tsc`・`prettier`・`eslint`・`prettier` のフォーマットを並列で実行する
+`prettier`・`eslint`・`prettier` を用いたフォーマットを**並列**で実行する。
 
 ```bash
 npm run format
