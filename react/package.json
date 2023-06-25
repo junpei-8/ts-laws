@@ -13,7 +13,7 @@
     "check:type": "tsc --noEmit --skipLibCheck",
     "check:prettier": "prettier . --plugin-search-dir . --check",
     "check:eslint": "eslint \"**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}\"",
-    "check:stylelint": "stylelint \"**/*.{css,svg,vue}\"",
+    "check:stylelint": "stylelint \"**/*.{css,svg}\"",
     "concurrently": "concurrently --prefix-colors auto"
   },
   "dependencies": {
