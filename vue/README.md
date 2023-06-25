@@ -51,6 +51,8 @@ npm i -D prettier prettier-plugin-jsdoc prettier-plugin-organize-attributes
 - [`eslint-plugin-import`](https://www.npmjs.com/package/eslint-plugin-import)
 - [`eslint-import-resolver-typescript`](https://www.npmjs.com/package/eslint-import-resolver-typescript)
 - [`eslint-plugin-sort-keys-custom-order`](https://www.npmjs.com/package/eslint-plugin-sort-keys-custom-order)
+- [`@typescript-eslint/eslint-plugin`](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
+- [`@typescript-eslint/parser`](https://www.npmjs.com/package/@typescript-eslint/parser)
 
 #### Plugins for Vue
 
@@ -62,7 +64,7 @@ npm i -D prettier prettier-plugin-jsdoc prettier-plugin-organize-attributes
 #### Installation
 
 ```bash
-npm i -D eslint @rushstack/eslint-patch eslint-plugin-import eslint-import-resolver-typescript eslint-plugin-sort-keys-custom-order eslint-plugin-vue eslint-plugin-vuejs-accessibility @vue/eslint-config-prettier @vue/eslint-config-typescript
+npm i -D eslint @rushstack/eslint-patch eslint-plugin-import eslint-import-resolver-typescript eslint-plugin-sort-keys-custom-order @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-vue eslint-plugin-vuejs-accessibility @vue/eslint-config-prettier @vue/eslint-config-typescript
 ```
 
 <br />
