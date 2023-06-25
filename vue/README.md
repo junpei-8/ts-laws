@@ -10,8 +10,8 @@
 
 ### Config File
 
-- [`.prettierrc.cjs`](./.prettierrc.cjs)
-- [`.prettierignore`](./.prettierignore)
+- [`./.prettierrc.cjs`](./.prettierrc.cjs)
+- [`./.prettierignore`](./.prettierignore)
 
 ### Module
 
@@ -36,8 +36,8 @@ npm i -D prettier prettier-plugin-jsdoc prettier-plugin-organize-attributes
 
 ### Config File
 
-- [`.eslintrc.cjs`](./.eslintrc.cjs)
-- [`.eslintignore`](./.eslintignore)
+- [`./.eslintrc.cjs`](./.eslintrc.cjs)
+- [`./.eslintignore`](./.eslintignore)
 
 ### Module
 
@@ -73,8 +73,8 @@ npm i -D eslint @rushstack/eslint-patch eslint-plugin-import eslint-import-resol
 
 ### Config File
 
-- [`.stylelintrc.cjs`](./.stylelintrc.cjs)
-- [`.stylelintignore`](./.stylelintignore)
+- [`./.stylelintrc.cjs`](./.stylelintrc.cjs)
+- [`./.stylelintignore`](./.stylelintignore)
 
 ### Module
 
@@ -102,9 +102,9 @@ npm i -D stylelint stylelint-config-html stylelint-config-recess-order stylelint
 
 ### Config FIle
 
-- [`tsconfig.json`](./tsconfig.json)
-- [`tsconfig.app.json`](./tsconfig.app.json)
-- [`tsconfig.node.json`](./tsconfig.node.json)
+- [`./tsconfig.json`](./tsconfig.json)
+- [`./tsconfig.app.json`](./tsconfig.app.json)
+- [`./tsconfig.node.json`](./tsconfig.node.json)
 
 ### Module
 
@@ -131,11 +131,11 @@ npm i -D typescript @tsconfig/node18 @vue/tsconfig @types/node
 
 ### Config File
 
-- [`.vscode/settings.json`](./.vscode/settings.json)
+- [`./.vscode/settings.json`](./.vscode/settings.json)
 
 ### Recommend Extension
 
-- [`.vscode/extensions.json`](./.vscode/extensions.json)
+- [`./.vscode/extensions.json`](./.vscode/extensions.json)
 
 <br />
 
