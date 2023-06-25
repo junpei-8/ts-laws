@@ -98,7 +98,9 @@ npm i -D stylelint stylelint-config-html stylelint-config-recess-order stylelint
 
 ## Typescript Config
 
-⚠️ Vue では `tsconfig.json` を調整しておらず、`pnpm create vue` で生成したものを使用している。
+⚠️ Typescript Config は調整しておらず、テンプレートの設定を流用しているだけ
+
+### Config FIle
 
 - [`tsconfig.json`](./tsconfig.json)
 - [`tsconfig.app.json`](./tsconfig.app.json)

@@ -97,10 +97,11 @@ npm i -D stylelint stylelint-config-html stylelint-config-recess-order stylelint
 
 ## Typescript Config
 
-⚠️ Vue では `tsconfig.json` を調整しておらず、`pnpm create vue` で生成したものを使用している。
+⚠️ Typescript Config は調整しておらず、テンプレートの設定を流用しているだけ
+
+### Config File
 
 - [`tsconfig.json`](./tsconfig.json)
-- [`tsconfig.app.json`](./tsconfig.app.json)
 - [`tsconfig.node.json`](./tsconfig.node.json)
 
 ### Module
@@ -109,17 +110,15 @@ npm i -D stylelint stylelint-config-html stylelint-config-recess-order stylelint
 
 - [`typescript`](https://www.npmjs.com/package/typescript)
 
-#### Configs
-
-- [`@tsconfig/node18`](https://www.npmjs.com/package/@tsconfig/node18)
-- [`@vue/tsconfig`](https://www.npmjs.com/package/@vue/tsconfig)
-
 #### Types
 
-- [`@types/node`](https://www.npmjs.com/package/@types/node)
+<!-- - [`@types/node`](https://www.npmjs.com/package/@types/node) -->
+
+- [`@types/react`](https://www.npmjs.com/package/@types/react)
+- [`@types/react-dom`](https://www.npmjs.com/package/@types/react-dom)
 
 ```bash
-npm i -D typescript @tsconfig/node18 @vue/tsconfig @types/node
+npm i -D typescript @types/react @types/react-dom
 ```
 
 <br />
