@@ -128,12 +128,12 @@ module.exports = {
         'react/jsx-sort-props': [
           'warn',
           {
-            callbacksLast: true,
+            noSortAlphabetically: true,
             shorthandFirst: true,
             shorthandLast: false,
+            callbacksLast: true,
             multiline: 'last',
             ignoreCase: true,
-            noSortAlphabetically: true,
           },
         ],
 
