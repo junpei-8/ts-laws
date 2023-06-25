@@ -8,16 +8,23 @@
 
 ## Prettier
 
-### Base
+### Config File
+
+- [`.prettierrc.cjs`](./.prettierrc.cjs)
+- [`.prettierignore`](./.prettierignore)
+
+### Module
+
+#### Base
 
 - [`prettier`](https://www.npmjs.com/package/prettier)
 
-### Plugins
+#### Plugins
 
 - [`prettier-plugin-jsdoc`](https://www.npmjs.com/package/prettier-plugin-jsdoc)
 - [`prettier-plugin-organize-attributes`](https://www.npmjs.com/package/prettier-plugin-organize-attributes)
 
-### Installation
+#### Installation
 
 ```bash
 npm i -D prettier prettier-plugin-jsdoc prettier-plugin-organize-attributes
@@ -27,25 +34,32 @@ npm i -D prettier prettier-plugin-jsdoc prettier-plugin-organize-attributes
 
 ## ESLint
 
-### Base
+### Config File
+
+- [`.eslintrc.cjs`](./.eslintrc.cjs)
+- [`.eslintignore`](./.eslintignore)
+
+### Module
+
+#### Base
 
 - [`eslint`](https://www.npmjs.com/package/eslint)
 - [`@rushstack/eslint-patch`](https://www.npmjs.com/package/@rushstack/eslint-patch)
 
-### Plugins
+#### Plugins
 
 - [`eslint-plugin-import`](https://www.npmjs.com/package/eslint-plugin-import)
 - [`eslint-import-resolver-typescript`](https://www.npmjs.com/package/eslint-import-resolver-typescript)
 - [`eslint-plugin-sort-keys-custom-order`](https://www.npmjs.com/package/eslint-plugin-sort-keys-custom-order)
 
-### Plugins for Vue
+#### Plugins for Vue
 
 - [`eslint-plugin-vue`](https://www.npmjs.com/package/eslint-plugin-vue)
 - [`eslint-plugin-vuejs-accessibility`](https://www.npmjs.com/package/eslint-plugin-vuejs-accessibility)
 - [`@vue/eslint-config-prettier`](https://www.npmjs.com/package/@vue/eslint-config-prettier)
 - [`@vue/eslint-config-typescript`](https://www.npmjs.com/package/@vue/eslint-config-typescript)
 
-### Installation
+#### Installation
 
 ```bash
 npm i -D eslint @rushstack/eslint-patch eslint-plugin-import eslint-import-resolver-typescript eslint-plugin-sort-keys-custom-order eslint-plugin-vue eslint-plugin-vuejs-accessibility @vue/eslint-config-prettier @vue/eslint-config-typescript
@@ -55,17 +69,24 @@ npm i -D eslint @rushstack/eslint-patch eslint-plugin-import eslint-import-resol
 
 ## Stylelint
 
-### Base
+### Config File
+
+- [`.stylelintrc.cjs`](./.stylelintrc.cjs)
+- [`.stylelintignore`](./.stylelintignore)
+
+### Module
+
+#### Base
 
 - [`stylelint`](https://www.npmjs.com/package/stylelint)
 
-### Plugins
+#### Plugins
 
 - [`stylelint-config-html`](https://www.npmjs.com/package/stylelint-config-html)
 - [`stylelint-config-recess-order`](https://www.npmjs.com/package/stylelint-config-recess-order)
 - [`stylelint-declaration-block-no-ignored-properties`](https://www.npmjs.com/package/stylelint-declaration-block-no-ignored-properties)
 
-### Installation
+#### Installation
 
 ```bash
 npm i -D stylelint stylelint-config-html stylelint-config-recess-order stylelint-declaration-block-no-ignored-properties
@@ -77,16 +98,22 @@ npm i -D stylelint stylelint-config-html stylelint-config-recess-order stylelint
 
 ⚠️ Vue では `tsconfig.json` を調整しておらず、`pnpm create vue` で生成したものを使用している。
 
-### Base
+- [`tsconfig.json`](./tsconfig.json)
+- [`tsconfig.app.json`](./tsconfig.app.json)
+- [`tsconfig.node.json`](./tsconfig.node.json)
+
+### Module
+
+#### Base
 
 - [`typescript`](https://www.npmjs.com/package/typescript)
 
-### Configs
+#### Configs
 
 - [`@tsconfig/node18`](https://www.npmjs.com/package/@tsconfig/node18)
 - [`@vue/tsconfig`](https://www.npmjs.com/package/@vue/tsconfig)
 
-### Types
+#### Types
 
 - [`@types/node`](https://www.npmjs.com/package/@types/node)
 
@@ -96,7 +123,19 @@ npm i -D typescript @tsconfig/node18 @vue/tsconfig @types/node
 
 <br />
 
-## 関連コマンド
+## VSCode Config
+
+### Config File
+
+- [`.vscode/settings.json`](./.vscode/settings.json)
+
+### Recommend Extension
+
+- [`.vscode/extensions.json`](./.vscode/extensions.json)
+
+<br />
+
+## Commands
 
 ### `check`
 
