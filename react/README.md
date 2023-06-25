@@ -1,4 +1,4 @@
-# Vue
+# React
 
 - [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/)
