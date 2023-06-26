@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run start",
     "prod": "npm run check && npm run build && npm run preview",
+    "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "format": "npm run concurrently \"npm:check:eslint -- --fix\" \"npm:check:stylelint -- --fix\" \"npm:check:prettier -- --write\"",
