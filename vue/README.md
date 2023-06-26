@@ -1,8 +1,16 @@
 # Vue
 
-- [Prettier](https://prettier.io/)
-- [ESLint](https://eslint.org/)
-- [Stylelint](https://stylelint.io/)
+- **[Prettier](#prettier)**
+
+  - https://prettier.io
+
+- **[ESLint](#eslint)**
+
+  - https://eslint.org
+
+- **[Stylelint](#stylelint)**
+
+  - https://stylelint.io
 
 <br />
 
