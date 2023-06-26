@@ -1,18 +1,20 @@
 {
   "name": "solid",
-  "scripts": {
-    "dev": "solid-start dev",
-    "build": "solid-start build",
-    "start": "solid-start start"
-  },
+  "version": "0.0.0",
   "type": "module",
-  "devDependencies": {
-    "@types/node": "^18.11.18",
-    "esbuild": "^0.14.54",
-    "postcss": "^8.4.21",
-    "solid-start-node": "^0.2.19",
-    "typescript": "^4.9.4",
-    "vite": "^4.1.4"
+  "scripts": {
+    "dev": "npm run start",
+    "prod": "npm run check && npm run build && npm run preview",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "npm run concurrently \"npm:check:eslint -- --fix\" \"npm:check:stylelint -- --fix\" \"npm:check:prettier -- --write\"",
+    "check": "npm run concurrently npm:check:*",
+    "check:type": "tsc --noEmit --skipLibCheck",
+    "check:prettier": "prettier . --plugin-search-dir . --check",
+    "check:eslint": "eslint \"**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}\"",
+    "check:stylelint": "stylelint \"**/*.{css,svg}\"",
+    "concurrently": "concurrently --prefix-colors auto"
   },
   "dependencies": {
     "@solidjs/meta": "^0.28.2",
@@ -20,6 +22,31 @@
     "solid-js": "^1.7.2",
     "solid-start": "^0.2.26",
     "undici": "^5.15.1"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.3.2",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "concurrently": "^8.2.0",
+    "esbuild": "^0.14.54",
+    "eslint": "^8.43.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-solid": "^0.12.1",
+    "eslint-plugin-sort-keys-custom-order": "^1.0.5",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.8",
+    "prettier-plugin-jsdoc": "^0.4.2",
+    "solid-start-node": "^0.2.19",
+    "stylelint": "^15.9.0",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-recess-order": "^4.2.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
+    "typescript": "^4.9.4",
+    "vite": "^4.1.4"
   },
   "engines": {
     "node": ">=16.8"
