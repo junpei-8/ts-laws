@@ -1,7 +1,7 @@
 /** @see https://github.com/microsoft/rushstack#readme */
 require('@rushstack/eslint-patch/modern-module-resolution');
 
-const COMMON_EXTENSIONS = 'cjs,cts';
+const COMMON_JS_EXTENSIONS = 'cjs,cts';
 const TS_EXTENSIONS = 'ts,cts,mts';
 
 /** @type {import('eslint/lib/shared/types').ConfigData} */
@@ -93,7 +93,7 @@ module.exports = {
 
   overrides: [
     {
-      files: [`**/*.{${COMMON_EXTENSIONS}}`],
+      files: [`**/*.{${COMMON_JS_EXTENSIONS}}`],
 
       env: { node: true },
     },
