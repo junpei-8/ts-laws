@@ -1,47 +1,201 @@
-# Svelte + TS + Vite
+# Svelte
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+- **[Prettier](#prettier)**
 
-## Recommended IDE Setup
+  - https://prettier.io
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+- **[ESLint](#eslint)**
 
-## Need an official Svelte framework?
+  - https://eslint.org
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+- **[Stylelint](#stylelint)**
 
-## Technical considerations
+  - https://stylelint.io
 
-**Why use this over SvelteKit?**
+<br />
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+## Prettier
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+### Config File
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+- [`./.prettierrc.cjs`](./.prettierrc.cjs)
+- [`./.prettierignore`](./.prettierignore)
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+### Module
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+#### Base
 
-**Why include `.vscode/extensions.json`?**
+- [`prettier`](https://www.npmjs.com/package/prettier)
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+#### Plugins
 
-**Why enable `allowJs` in the TS template?**
+- [`prettier-plugin-jsdoc`](https://www.npmjs.com/package/prettier-plugin-jsdoc)
 
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
+#### Plugins for Svelte
 
-**Why is HMR not preserving my local component state?**
+- [`prettier-plugin-svelte`](https://www.npmjs.com/package/prettier-plugin-svelte)
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
+#### Installation
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+```bash
+npm i -D prettier prettier-plugin-jsdoc prettier-plugin-svelte
 ```
+
+<br />
+
+## ESLint
+
+### Config File
+
+- [`./.eslintrc.cjs`](./.eslintrc.cjs)
+- [`./.eslintignore`](./.eslintignore)
+
+### Module
+
+#### Base
+
+- [`eslint`](https://www.npmjs.com/package/eslint)
+- [`@rushstack/eslint-patch`](https://www.npmjs.com/package/@rushstack/eslint-patch)
+
+#### Plugins
+
+- [`eslint-plugin-import`](https://www.npmjs.com/package/eslint-plugin-import)
+- [`eslint-import-resolver-typescript`](https://www.npmjs.com/package/eslint-import-resolver-typescript)
+- [`eslint-plugin-sort-keys-custom-order`](https://www.npmjs.com/package/eslint-plugin-sort-keys-custom-order)
+- [`@typescript-eslint/eslint-plugin`](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin)
+- [`@typescript-eslint/parser`](https://www.npmjs.com/package/@typescript-eslint/parser)
+
+#### Plugins for Svelte
+
+- [`eslint-plugin-svelte`](https://www.npmjs.com/package/eslint-plugin-svelte)
+
+#### Installation
+
+```bash
+npm i -D eslint @rushstack/eslint-patch eslint-plugin-import eslint-import-resolver-typescript eslint-plugin-sort-keys-custom-order @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-svelte
+```
+
+<br />
+
+## Stylelint
+
+### Config File
+
+- [`./.stylelintrc.cjs`](./.stylelintrc.cjs)
+- [`./.stylelintignore`](./.stylelintignore)
+
+### Module
+
+#### Base
+
+- [`stylelint`](https://www.npmjs.com/package/stylelint)
+
+#### Plugins
+
+- [`stylelint-config-html`](https://www.npmjs.com/package/stylelint-config-html)
+- [`stylelint-config-recess-order`](https://www.npmjs.com/package/stylelint-config-recess-order)
+- [`stylelint-declaration-block-no-ignored-properties`](https://www.npmjs.com/package/stylelint-declaration-block-no-ignored-properties)
+
+#### Installation
+
+```bash
+npm i -D stylelint stylelint-config-html stylelint-config-recess-order stylelint-declaration-block-no-ignored-properties
+```
+
+<br />
+
+## Typescript Config
+
+⚠️ Typescript Config は調整しておらず、テンプレートの設定を流用しているだけ
+
+### Config File
+
+- [`./tsconfig.json`](./tsconfig.json)
+- [`./tsconfig.node.json`](./tsconfig.node.json)
+
+### Module
+
+#### Base
+
+- [`typescript`](https://www.npmjs.com/package/typescript)
+
+#### Configs
+
+- [`@tsconfig/svelte`](https://www.npmjs.com/package/@tsconfig/svelte)
+
+```bash
+npm i -D typescript @tsconfig/svelte
+```
+
+<br />
+
+## VSCode Config
+
+### Config File
+
+- [`./.vscode/settings.json`](./.vscode/settings.json)
+
+### Recommend Extension
+
+- [`./.vscode/extensions.json`](./.vscode/extensions.json)
+
+<br />
+
+## Commands
+
+### Module
+
+#### Plugins
+
+- [`concurrently`](https://www.npmjs.com/package/concurrently)
+
+#### Installation
+
+```bash
+npm i -D concurrently
+```
+
+### `check`
+
+`vue-tsc`・`prettier`・`eslint`・`prettier` を用いた静的解析を**並列**で実行する。
+
+```bash
+npm run check
+```
+
+### `format`
+
+`prettier`・`eslint`・`prettier` を用いたフォーマットを**並列**で実行する。
+
+```bash
+npm run format
+```
+
+<br>
+
+## 使用したテンプレート
+
+`pnpm create vite` を実行し作成したプロジェクトを使用。
+
+### 生成時のコマンド
+
+<img alt="テンプレート生成時に選択した選択肢の画像" src="./docs/images/generate-template-command-log.png" />
+
+<details>
+  <summary><b>テキストログ</b></summary>
+<div>
+
+```zsh
+✔ Project name: … vue
+✔ Add TypeScript? …  Yes
+✔ Add JSX Support? … No
+✔ Add Vue Router for Single Page Application development? … No
+✔ Add Pinia for state management? … No
+✔ Add Vitest for Unit Testing? … No
+✔ Add an End-to-End Testing Solution? › No
+✔ Add ESLint for code quality? … Yes
+✔ Add Prettier for code formatting? … Yes
+```
+
+</div>
+</details>
