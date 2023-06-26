@@ -32,9 +32,6 @@ module.exports = {
     'no-console': 'off',
     'no-debugger': 'off',
 
-    /** @docs https://github.com/ArnaudBarre/eslint-plugin-react-refresh#usage */
-    'react-refresh/only-export-components': 'warn',
-
     /** @docs https://github.com/import-js/eslint-plugin-import#rules */
     'import/named': 'off',
     'import/namespace': 'off',
@@ -85,11 +82,6 @@ module.exports = {
     {
       files: [`**/*.{jsx,tsx}`],
 
-      // settings: {
-      //   /** @docs https://github.com/jsx-eslint/eslint-plugin-react#configuration-legacy-eslintrc- */
-      //   react: { version: 'detect' },
-      // },
-
       plugins: [
         /** @npm https://www.npmjs.com/package/eslint-plugin-react */
         'react',
@@ -123,6 +115,7 @@ module.exports = {
             callbacksLast: true,
             multiline: 'last',
             ignoreCase: true,
+            reservedFirst: ['key', 'ref'],
           },
         ],
       },
