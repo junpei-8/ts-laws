@@ -3,8 +3,8 @@
   "editor.insertSpaces": false,
   "editor.detectIndentation": false,
 
-  "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports": false,
     "source.fixAll.eslint": true,
@@ -13,5 +13,9 @@
 
   "eslint.validate": ["javascript", "typescript", "svelte"],
 
-  "stylelint.validate": ["css", "svg", "svelte"]
+  "stylelint.validate": ["css", "svg", "svelte"],
+
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  }
 }
