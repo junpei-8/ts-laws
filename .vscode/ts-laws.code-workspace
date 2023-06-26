@@ -3,7 +3,7 @@
     { "path": "../" },
     { "path": "../react" },
     { "path": "../solid" },
-    { "path": "../vanilla-extract"},
+    { "path": "../svelte" },
     { "path": "../vue" }
   ],
 }
