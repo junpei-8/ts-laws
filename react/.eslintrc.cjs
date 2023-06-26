@@ -134,6 +134,7 @@ module.exports = {
             callbacksLast: true,
             multiline: 'last',
             ignoreCase: true,
+            reservedFirst: ['key', 'ref'],
           },
         ],
 
