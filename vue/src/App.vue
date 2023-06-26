@@ -7,8 +7,8 @@ import TheWelcome from './components/TheWelcome.vue';
   <header>
     <img
       class="logo"
-      alt="Vue logo"
       src="./assets/logo.svg"
+      alt="Vue logo"
       width="125"
       height="125"
     />
