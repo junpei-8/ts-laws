@@ -149,6 +149,18 @@ npm i -D typescript @tsconfig/node18 @vue/tsconfig @types/node
 
 ## Commands
 
+### Module
+
+#### Plugins
+
+- [`concurrently`](https://www.npmjs.com/package/concurrently)
+
+#### Installation
+
+```bash
+npm i -D concurrently
+```
+
 ### `check`
 
 `vue-tsc`・`prettier`・`eslint`・`prettier` を用いた静的解析を**並列**で実行する。

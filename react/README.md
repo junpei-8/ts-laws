@@ -145,6 +145,18 @@ npm i -D typescript @types/react @types/react-dom
 
 ## Commands
 
+### Module
+
+#### Plugins
+
+- [`concurrently`](https://www.npmjs.com/package/concurrently)
+
+#### Installation
+
+```bash
+npm i -D concurrently
+```
+
 ### `check`
 
 `tsc`・`prettier`・`eslint`・`prettier` を用いた静的解析を**並列**で実行する。
