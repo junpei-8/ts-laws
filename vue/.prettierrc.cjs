@@ -42,7 +42,7 @@ module.exports = {
     '^(for|:for)$',
     '^(name|:name)$',
     '^(class|:class)$',
-    '$DEFAULT',
+    '$CODE_GUIDE',
     '^aria-',
     '^data-',
     '^v-model$',
