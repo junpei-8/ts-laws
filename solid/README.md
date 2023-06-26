@@ -101,7 +101,6 @@ npm i -D stylelint stylelint-config-html stylelint-config-recess-order stylelint
 ### Config File
 
 - [`./tsconfig.json`](./tsconfig.json)
-- [`./tsconfig.node.json`](./tsconfig.node.json)
 
 ### Module
 
@@ -111,13 +110,10 @@ npm i -D stylelint stylelint-config-html stylelint-config-recess-order stylelint
 
 #### Types
 
-<!-- - [`@types/node`](https://www.npmjs.com/package/@types/node) -->
-
-- [`@types/react`](https://www.npmjs.com/package/@types/react)
-- [`@types/react-dom`](https://www.npmjs.com/package/@types/react-dom)
+- [`@types/node`](https://www.npmjs.com/package/@types/node)
 
 ```bash
-npm i -D typescript @types/react @types/react-dom
+npm i -D typescript @types/node
 ```
 
 <br />
@@ -156,7 +152,7 @@ npm run format
 
 ## 使用したテンプレート
 
-`pnpm create vite` を実行し作成したプロジェクトを使用。
+`pnpm create solid` を実行し作成したプロジェクトを使用。
 
 ### 生成時のコマンド
 
@@ -167,9 +163,9 @@ npm run format
 <div>
 
 ```zsh
-✔ Project name: … react
-✔ Select a framework: › React
-✔ Select a variant: › TypeScript
+✔ Which template do you want to use? › bare
+✔ Server Side Rendering? … no
+✔ Use TypeScript? … yes
 ```
 
 </div>
