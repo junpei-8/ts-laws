@@ -13,8 +13,8 @@
     "check": "npm run concurrently npm:check:*",
     "check:type": "svelte-check --tsconfig ./tsconfig.json",
     "check:prettier": "prettier . --plugin-search-dir . --check",
-    "check:eslint": "eslint \"**/*.{js,cjs,mjs,ts,cts,mts}\"",
-    "check:stylelint": "stylelint \"**/*.{css,svg,vue}\"",
+    "check:eslint": "eslint \"**/*.{js,cjs,mjs,ts,cts,mts,svelte}\"",
+    "check:stylelint": "stylelint \"**/*.{css,svg,svelte}\"",
     "concurrently": "concurrently --prefix-colors auto"
   },
   "devDependencies": {
