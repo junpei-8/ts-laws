@@ -25,6 +25,12 @@ module.exports = {
   extends: [
     /** @config https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts */
     'eslint:recommended',
+
+    /**
+     * @npm https://www.npmjs.com/package/eslint-plugin-prettier
+     * @config https://github.com/prettier/eslint-plugin-prettier/blob/master/eslint-plugin-prettier.js
+     */
+    'plugin:prettier/recommended',
   ],
 
   rules: {
