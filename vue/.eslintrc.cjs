@@ -23,14 +23,14 @@ module.exports = {
   ],
 
   extends: [
-    /**
-     * @npm https://www.npmjs.com/package/eslint-plugin-vue
-     * @config https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/index.js
-     */
-    'plugin:vue/vue3-essential',
-
     /** @config https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts */
     'eslint:recommended',
+
+    /**
+     * @npm https://www.npmjs.com/package/eslint-plugin-vue
+     * @config https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/configs/vue3-recommended.js
+     */
+    'plugin:vue/vue3-recommended',
 
     /**
      * @npm https://www.npmjs.com/package/eslint-plugin-vuejs-accessibility
