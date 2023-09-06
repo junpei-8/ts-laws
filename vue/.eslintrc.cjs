@@ -1,9 +1,6 @@
 /** @see https://github.com/microsoft/rushstack#readme */
 require('@rushstack/eslint-patch/modern-module-resolution');
 
-const COMMON_JS_EXTENSIONS = 'cjs,cts';
-const TS_EXTENSIONS = 'ts,cts,mts';
-
 /** @type {import('eslint/lib/shared/types').ConfigData} */
 module.exports = {
   root: true,
@@ -23,7 +20,10 @@ module.exports = {
   ],
 
   extends: [
-    /** @config https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts */
+    /**
+     * @npm https://www.npmjs.com/package/eslint
+     * @config https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js
+     */
     'eslint:recommended',
 
     /**
@@ -93,13 +93,13 @@ module.exports = {
 
   overrides: [
     {
-      files: [`**/*.{${COMMON_JS_EXTENSIONS}}`],
+      files: [`**/*.{cjs,cts}`],
 
       env: { node: true },
     },
 
     {
-      files: [`**/*.{${TS_EXTENSIONS},vue}`],
+      files: [`**/*.{ts,cts,mts,vue}`],
 
       extends: [
         /**
