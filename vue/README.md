@@ -30,12 +30,11 @@
 #### Plugins
 
 - [`prettier-plugin-jsdoc`](https://www.npmjs.com/package/prettier-plugin-jsdoc)
-- [`prettier-plugin-organize-attributes`](https://www.npmjs.com/package/prettier-plugin-organize-attributes)
 
 #### Installation
 
 ```bash
-npm i -D prettier prettier-plugin-jsdoc prettier-plugin-organize-attributes
+npm i -D prettier prettier-plugin-jsdoc
 ```
 
 <br />

@@ -56,6 +56,7 @@ npm i -D prettier prettier-plugin-jsdoc prettier-plugin-svelte
 
 - [`eslint`](https://www.npmjs.com/package/eslint)
 - [`@rushstack/eslint-patch`](https://www.npmjs.com/package/@rushstack/eslint-patch)
+- [`eslint-config-prettier`](https://www.npmjs.com/package/eslint-config-prettier)
 
 #### Plugins
 
