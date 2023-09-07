@@ -10,6 +10,8 @@ module.exports = {
 
   /** @docs https://prettier.io/docs/en/options */
   printWidth: 80,
+  tabWidth: 2,
+  useTabs: false,
   semi: true,
   singleQuote: true,
   trailingComma: 'all',

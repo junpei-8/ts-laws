@@ -11,6 +11,8 @@
     "source.fixAll.stylelint": true
   },
 
+  "prettier.documentSelectors": ["**/*.svg"],
+
   "eslint.validate": ["javascript", "typescript", "svelte"],
 
   "stylelint.validate": ["css", "svg", "svelte"],
