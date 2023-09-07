@@ -28,7 +28,7 @@ module.exports = {
 
     /**
      * @npm https://www.npmjs.com/package/eslint-config-prettier
-     * @config https://github.com/prettier/eslint-config-prettier/blob/main/.eslintrc.base.js
+     * @config https://github.com/prettier/eslint-config-prettier/blob/main/index.js
      */
     'prettier',
   ],
