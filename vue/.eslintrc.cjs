@@ -110,7 +110,8 @@ module.exports = {
 
       rules: {
         /** @docs https://eslint.vuejs.org/rules */
-        'vue/html-self-closing': ['warn'],
+        'vue/multi-word-component-names': 'off',
+        'vue/html-self-closing': ['warn', { html: { void: 'always' } }],
         'vue/component-name-in-template-casing': [
           'error',
           'PascalCase',
