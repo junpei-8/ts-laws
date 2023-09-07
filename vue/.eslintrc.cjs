@@ -39,11 +39,10 @@ module.exports = {
     'plugin:vuejs-accessibility/recommended',
 
     /**
-     * @npm https://www.npmjs.com/package/@vue/eslint-config-prettier
-     * @docs https://github.com/vuejs/eslint-config-prettier#use-separate-commands-for-linting-and-formatting
-     * @config https://github.com/vuejs/eslint-config-prettier/blob/main/skip-formatting.js
+     * @npm https://www.npmjs.com/package/eslint-config-prettier
+     * @config https://github.com/prettier/eslint-config-prettier/blob/main/.eslintrc.base.js
      */
-    '@vue/eslint-config-prettier/skip-formatting',
+    'prettier',
   ],
 
   rules: {

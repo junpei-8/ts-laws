@@ -52,6 +52,7 @@ npm i -D prettier prettier-plugin-jsdoc
 
 - [`eslint`](https://www.npmjs.com/package/eslint)
 - [`@rushstack/eslint-patch`](https://www.npmjs.com/package/@rushstack/eslint-patch)
+- [`eslint-config-prettier`](https://www.npmjs.com/package/eslint-config-prettier)
 
 #### Plugins
 
@@ -65,13 +66,12 @@ npm i -D prettier prettier-plugin-jsdoc
 
 - [`eslint-plugin-vue`](https://www.npmjs.com/package/eslint-plugin-vue)
 - [`eslint-plugin-vuejs-accessibility`](https://www.npmjs.com/package/eslint-plugin-vuejs-accessibility)
-- [`@vue/eslint-config-prettier`](https://www.npmjs.com/package/@vue/eslint-config-prettier)
 - [`@vue/eslint-config-typescript`](https://www.npmjs.com/package/@vue/eslint-config-typescript)
 
 #### Installation
 
 ```bash
-npm i -D eslint @rushstack/eslint-patch eslint-plugin-import eslint-import-resolver-typescript eslint-plugin-sort-keys-custom-order @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-vue eslint-plugin-vuejs-accessibility @vue/eslint-config-prettier @vue/eslint-config-typescript
+npm i -D eslint @rushstack/eslint-patch eslint-config-prettier eslint-plugin-import eslint-import-resolver-typescript eslint-plugin-sort-keys-custom-order @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-vue eslint-plugin-vuejs-accessibility @vue/eslint-config-typescript
 ```
 
 <br />
