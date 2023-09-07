@@ -71,7 +71,7 @@ npm i -D prettier prettier-plugin-jsdoc
 #### Installation
 
 ```bash
-npm i -D eslint @rushstack/eslint-patch eslint-plugin-import eslint-import-resolver-typescript eslint-plugin-sort-keys-custom-order @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-solid eslint-plugin-react eslint-plugin-jsx-a11y
+npm i -D eslint @rushstack/eslint-patch eslint-config-prettier eslint-plugin-import eslint-import-resolver-typescript eslint-plugin-sort-keys-custom-order @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-solid eslint-plugin-react eslint-plugin-jsx-a11y
 ```
 
 <br />
