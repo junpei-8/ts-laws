@@ -27,18 +27,6 @@ module.exports = {
     'eslint:recommended',
 
     /**
-     * @npm https://www.npmjs.com/package/eslint-plugin-vue
-     * @config https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/configs/vue3-recommended.js
-     */
-    'plugin:vue/vue3-recommended',
-
-    /**
-     * @npm https://www.npmjs.com/package/eslint-plugin-vuejs-accessibility
-     * @config https://github.com/vue-a11y/eslint-plugin-vuejs-accessibility/blob/main/src/configs/recommended.ts
-     */
-    'plugin:vuejs-accessibility/recommended',
-
-    /**
      * @npm https://www.npmjs.com/package/eslint-config-prettier
      * @config https://github.com/prettier/eslint-config-prettier/blob/main/index.js
      */
@@ -95,6 +83,40 @@ module.exports = {
       files: [`**/*.{cjs,cts}`],
 
       env: { node: true },
+    },
+
+    {
+      files: ['**/*.vue'],
+
+      extends: [
+        /**
+         * @npm https://www.npmjs.com/package/eslint-plugin-vue
+         * @config https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/configs/vue3-recommended.js
+         */
+        'plugin:vue/vue3-recommended',
+
+        /**
+         * @npm https://www.npmjs.com/package/eslint-plugin-vuejs-accessibility
+         * @config https://github.com/vue-a11y/eslint-plugin-vuejs-accessibility/blob/main/src/configs/recommended.ts
+         */
+        'plugin:vuejs-accessibility/recommended',
+
+        /**
+         * @npm https://www.npmjs.com/package/eslint-config-prettier
+         * @config https://github.com/prettier/eslint-config-prettier/blob/main/index.js
+         */
+        'prettier',
+      ],
+
+      rules: {
+        /** @docs https://eslint.vuejs.org/rules */
+        'vue/html-self-closing': ['warn'],
+        'vue/component-name-in-template-casing': [
+          'error',
+          'PascalCase',
+          { registeredComponentsOnly: false },
+        ],
+      },
     },
 
     {
