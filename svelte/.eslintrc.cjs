@@ -5,20 +5,6 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 module.exports = {
   root: true,
 
-  parserOptions: {
-    sourceType: 'module',
-    ecmaVersion: 'latest',
-    warnOnUnsupportedTypeScriptVersion: false,
-  },
-
-  plugins: [
-    /** @npm https://www.npmjs.com/package/eslint-plugin-import */
-    'import',
-
-    /** @npm https://www.npmjs.com/package/eslint-plugin-sort-keys-custom-order */
-    'sort-keys-custom-order',
-  ],
-
   extends: [
     /**
      * @npm https://www.npmjs.com/package/eslint
@@ -32,6 +18,20 @@ module.exports = {
      */
     'prettier',
   ],
+
+  plugins: [
+    /** @npm https://www.npmjs.com/package/eslint-plugin-import */
+    'import',
+
+    /** @npm https://www.npmjs.com/package/eslint-plugin-sort-keys-custom-order */
+    'sort-keys-custom-order',
+  ],
+
+  parserOptions: {
+    sourceType: 'module',
+    ecmaVersion: 'latest',
+    warnOnUnsupportedTypeScriptVersion: false,
+  },
 
   rules: {
     /** @docs https://eslint.org/docs/latest/rules */
@@ -86,54 +86,7 @@ module.exports = {
     },
 
     {
-      files: [`**/*.{jsx,tsx}`],
-
-      plugins: [
-        /** @npm https://www.npmjs.com/package/eslint-plugin-react */
-        'react',
-      ],
-
-      extends: [
-        /**
-         * @npm https://www.npmjs.com/package/eslint-plugin-jsx-a11y
-         * @config https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/index.js
-         */
-        'plugin:jsx-a11y/strict',
-
-        /**
-         * @npm https://www.npmjs.com/package/eslint-plugin-solid
-         * @config https://github.com/solidjs-community/eslint-plugin-solid/blob/main/src/index.ts
-         */
-        'plugin:solid/recommended',
-      ],
-
-      rules: {
-        /** @docs https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules */
-        'jsx-a11y/control-has-associated-label': 'error',
-
-        /** @docs https://github.com/jsx-eslint/eslint-plugin-react#list-of-supported-rules */
-        'react/jsx-sort-props': [
-          'warn',
-          {
-            noSortAlphabetically: true,
-            shorthandFirst: true,
-            shorthandLast: false,
-            callbacksLast: true,
-            multiline: 'last',
-            ignoreCase: true,
-            reservedFirst: ['key', 'ref'],
-          },
-        ],
-      },
-    },
-
-    {
-      files: [`**/*.{ts,cts,mts,tsx}`],
-
-      settings: {
-        /** @docs https://github.com/import-js/eslint-import-resolver-typescript#configuration */
-        'import/resolver': { typescript: {} },
-      },
+      files: [`**/*.{ts,cts,mts,svelte}`],
 
       extends: [
         /**
@@ -142,6 +95,11 @@ module.exports = {
          */
         'plugin:@typescript-eslint/recommended',
       ],
+
+      settings: {
+        /** @docs https://github.com/import-js/eslint-import-resolver-typescript#configuration */
+        'import/resolver': { typescript: {} },
+      },
 
       rules: {
         /** @docs https://typescript-eslint.io/rules */
@@ -162,6 +120,27 @@ module.exports = {
 
         /** @docs https://github.com/import-js/eslint-plugin-import#rules */
         'import/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
+      },
+    },
+
+    {
+      files: [`**/*.svelte`],
+
+      extends: [
+        /**
+         * @npm https://www.npmjs.com/package/eslint-plugin-svelte
+         * @config https://github.com/sveltejs/eslint-plugin-svelte/blob/main/src/configs/recommended.ts
+         */
+        'plugin:svelte/recommended',
+
+        /** @config https://github.com/sveltejs/eslint-plugin-svelte/blob/main/src/configs/prettier.ts */
+        'plugin:svelte/prettier',
+      ],
+
+      parser: 'svelte-eslint-parser',
+
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
       },
     },
   ],

@@ -5,20 +5,6 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 module.exports = {
   root: true,
 
-  parserOptions: {
-    sourceType: 'module',
-    ecmaVersion: 'latest',
-    warnOnUnsupportedTypeScriptVersion: false,
-  },
-
-  plugins: [
-    /** @npm https://www.npmjs.com/package/eslint-plugin-import */
-    'import',
-
-    /** @npm https://www.npmjs.com/package/eslint-plugin-sort-keys-custom-order */
-    'sort-keys-custom-order',
-  ],
-
   extends: [
     /**
      * @npm https://www.npmjs.com/package/eslint
@@ -32,6 +18,20 @@ module.exports = {
      */
     'prettier',
   ],
+
+  plugins: [
+    /** @npm https://www.npmjs.com/package/eslint-plugin-import */
+    'import',
+
+    /** @npm https://www.npmjs.com/package/eslint-plugin-sort-keys-custom-order */
+    'sort-keys-custom-order',
+  ],
+
+  parserOptions: {
+    sourceType: 'module',
+    ecmaVersion: 'latest',
+    warnOnUnsupportedTypeScriptVersion: false,
+  },
 
   rules: {
     /** @docs https://eslint.org/docs/latest/rules */
@@ -86,41 +86,6 @@ module.exports = {
     },
 
     {
-      files: ['**/*.vue'],
-
-      extends: [
-        /**
-         * @npm https://www.npmjs.com/package/eslint-plugin-vue
-         * @config https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/configs/vue3-recommended.js
-         */
-        'plugin:vue/vue3-recommended',
-
-        /**
-         * @npm https://www.npmjs.com/package/eslint-plugin-vuejs-accessibility
-         * @config https://github.com/vue-a11y/eslint-plugin-vuejs-accessibility/blob/main/src/configs/recommended.ts
-         */
-        'plugin:vuejs-accessibility/recommended',
-
-        /**
-         * @npm https://www.npmjs.com/package/eslint-config-prettier
-         * @config https://github.com/prettier/eslint-config-prettier/blob/main/index.js
-         */
-        'prettier',
-      ],
-
-      rules: {
-        /** @docs https://eslint.vuejs.org/rules */
-        'vue/multi-word-component-names': 'off',
-        'vue/html-self-closing': ['warn', { html: { void: 'always' } }],
-        'vue/component-name-in-template-casing': [
-          'error',
-          'PascalCase',
-          { registeredComponentsOnly: false },
-        ],
-      },
-    },
-
-    {
       files: [`**/*.{ts,cts,mts,vue}`],
 
       extends: [
@@ -155,6 +120,41 @@ module.exports = {
 
         /** @docs https://github.com/import-js/eslint-plugin-import#rules */
         'import/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
+      },
+    },
+
+    {
+      files: ['**/*.vue'],
+
+      extends: [
+        /**
+         * @npm https://www.npmjs.com/package/eslint-plugin-vue
+         * @config https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/configs/vue3-recommended.js
+         */
+        'plugin:vue/vue3-recommended',
+
+        /**
+         * @npm https://www.npmjs.com/package/eslint-plugin-vuejs-accessibility
+         * @config https://github.com/vue-a11y/eslint-plugin-vuejs-accessibility/blob/main/src/configs/recommended.ts
+         */
+        'plugin:vuejs-accessibility/recommended',
+
+        /**
+         * @npm https://www.npmjs.com/package/eslint-config-prettier
+         * @config https://github.com/prettier/eslint-config-prettier/blob/main/index.js
+         */
+        'prettier',
+      ],
+
+      rules: {
+        /** @docs https://eslint.vuejs.org/rules */
+        'vue/multi-word-component-names': 'off',
+        'vue/html-self-closing': ['warn', { html: { void: 'always' } }],
+        'vue/component-name-in-template-casing': [
+          'error',
+          'PascalCase',
+          { registeredComponentsOnly: false },
+        ],
       },
     },
   ],

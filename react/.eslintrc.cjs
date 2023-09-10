@@ -5,20 +5,6 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 module.exports = {
   root: true,
 
-  parserOptions: {
-    sourceType: 'module',
-    ecmaVersion: 'latest',
-    warnOnUnsupportedTypeScriptVersion: false,
-  },
-
-  plugins: [
-    /** @npm https://www.npmjs.com/package/eslint-plugin-import */
-    'import',
-
-    /** @npm https://www.npmjs.com/package/eslint-plugin-sort-keys-custom-order */
-    'sort-keys-custom-order',
-  ],
-
   extends: [
     /**
      * @npm https://www.npmjs.com/package/eslint
@@ -32,6 +18,20 @@ module.exports = {
      */
     'prettier',
   ],
+
+  plugins: [
+    /** @npm https://www.npmjs.com/package/eslint-plugin-import */
+    'import',
+
+    /** @npm https://www.npmjs.com/package/eslint-plugin-sort-keys-custom-order */
+    'sort-keys-custom-order',
+  ],
+
+  parserOptions: {
+    sourceType: 'module',
+    ecmaVersion: 'latest',
+    warnOnUnsupportedTypeScriptVersion: false,
+  },
 
   rules: {
     /** @docs https://eslint.org/docs/latest/rules */
@@ -89,20 +89,45 @@ module.exports = {
     },
 
     {
-      files: [`**/*.{jsx,tsx}`],
+      files: [`**/*.{ts,cts,mts,tsx}`],
+
+      extends: [
+        /**
+         * @npm https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
+         * @config https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
+         */
+        'plugin:@typescript-eslint/recommended',
+      ],
 
       settings: {
-        /** @docs https://github.com/jsx-eslint/eslint-plugin-react#configuration-legacy-eslintrc- */
-        react: { version: 'detect' },
+        /** @docs https://github.com/import-js/eslint-import-resolver-typescript#configuration */
+        'import/resolver': { typescript: {} },
       },
 
-      plugins: [
-        /**
-         * @npm https://www.npmjs.com/package/eslint-plugin-react-refresh
-         * @config https://github.com/ArnaudBarre/eslint-plugin-react-refresh/tree/main/src
-         */
-        'react-refresh',
-      ],
+      rules: {
+        /** @docs https://typescript-eslint.io/rules */
+        '@typescript-eslint/no-namespace': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/no-empty-interface': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/no-import-type-side-effects': 'error',
+        '@typescript-eslint/consistent-type-imports': [
+          'error',
+          {
+            prefer: 'type-imports',
+            fixStyle: 'inline-type-imports',
+            disallowTypeAnnotations: true,
+          },
+        ],
+
+        /** @docs https://github.com/import-js/eslint-plugin-import#rules */
+        'import/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
+      },
+    },
+
+    {
+      files: [`**/*.{jsx,tsx}`],
 
       extends: [
         /**
@@ -123,6 +148,19 @@ module.exports = {
          */
         'plugin:jsx-a11y/strict',
       ],
+
+      plugins: [
+        /**
+         * @npm https://www.npmjs.com/package/eslint-plugin-react-refresh
+         * @config https://github.com/ArnaudBarre/eslint-plugin-react-refresh/tree/main/src
+         */
+        'react-refresh',
+      ],
+
+      settings: {
+        /** @docs https://github.com/jsx-eslint/eslint-plugin-react#configuration-legacy-eslintrc- */
+        react: { version: 'detect' },
+      },
 
       rules: {
         /** @docs https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules */
@@ -146,44 +184,6 @@ module.exports = {
 
         /** @docs https://github.com/ArnaudBarre/eslint-plugin-react-refresh#usage */
         'react-refresh/only-export-components': 'warn',
-      },
-    },
-
-    {
-      files: [`**/*.{ts,cts,mts,tsx}`],
-
-      settings: {
-        /** @docs https://github.com/import-js/eslint-import-resolver-typescript#configuration */
-        'import/resolver': { typescript: {} },
-      },
-
-      extends: [
-        /**
-         * @npm https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
-         * @config https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
-         */
-        'plugin:@typescript-eslint/recommended',
-      ],
-
-      rules: {
-        /** @docs https://typescript-eslint.io/rules */
-        '@typescript-eslint/no-namespace': 'off',
-        '@typescript-eslint/no-explicit-any': 'off',
-        '@typescript-eslint/no-empty-function': 'off',
-        '@typescript-eslint/no-empty-interface': 'off',
-        '@typescript-eslint/no-non-null-assertion': 'off',
-        '@typescript-eslint/no-import-type-side-effects': 'error',
-        '@typescript-eslint/consistent-type-imports': [
-          'error',
-          {
-            prefer: 'type-imports',
-            fixStyle: 'inline-type-imports',
-            disallowTypeAnnotations: true,
-          },
-        ],
-
-        /** @docs https://github.com/import-js/eslint-plugin-import#rules */
-        'import/consistent-type-specifier-style': ['warn', 'prefer-top-level'],
       },
     },
   ],
